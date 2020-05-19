@@ -29,6 +29,37 @@ body {
   right: 0;
 }
 
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+}
+ul.timeline:before {
+  content: ' ';
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline > li {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+ul.timeline > li:before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #22c0e8;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
 #spinner {
   animation: rotate 0.5s infinite linear;
   width: 50px;
@@ -239,7 +270,7 @@ body {
   margin: 1.5vh 0px;
 }
 
-#username {
+#username, #resume {
   font-size: 18px;
   font-weight: bold;
 }
@@ -280,7 +311,7 @@ body {
   font-size: 16px;
 }
 
-#work {
+#work, #education {
   margin: 2vh 0px;
   padding: 4vh 0px !important;
 }
